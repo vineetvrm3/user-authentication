@@ -1,0 +1,39 @@
+
+GET http://localhost:9000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTY3MjM2NTksImV4cCI6MTcxNjcyNzI1OSwiYXVkIjoiNjY1MzEzYjk0OTNiZTY5MDQ2NzY3MDdlIiwiaXNzIjoidmluZWV0In0.AzBDop4_n_UzGBy-t8W0aJjZMLPZ_uvKYtUXomqzqu0
+
+###Login Route
+POST http://localhost:9000/auth/login
+Content-Type: application/json
+
+{    
+    "email":"annu123@gmail.com",
+    "password":"annu123"
+}
+
+###Register Route
+POST http://localhost:9000/auth/register
+Content-Type: application/json
+
+{
+    "name":"annu123",
+    "location":"Location",
+    "email":"annu123@gmail.com",
+    "password":"annu123"
+}
+
+###Refresh Token Route
+POST http://localhost:9000/auth/refresh-token
+Content-Type: application/json 
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTY3MjQ1NDUsImV4cCI6MTcxNjcyNDYwNSwiYXVkIjoiNjY1MzEzYjk0OTNiZTY5MDQ2NzY3MDdlIiwiaXNzIjoidmluZWV0In0.xNNyyxGAmC2iOjyhPkHMfursnP5TAXe8UOpAzgIDtUc"
+}
+
+###Logout Route
+DELETE http://localhost:9000/auth/logout
+Content-Type: application/json 
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTY3MjQ1NDUsImV4cCI6MTcxNjcyNDYwNSwiYXVkIjoiNjY1MzEzYjk0OTNiZTY5MDQ2NzY3MDdlIiwiaXNzIjoidmluZWV0In0.xNNyyxGAmC2iOjyhPkHMfursnP5TAXe8UOpAzgIDtUc"
+}
